@@ -1,7 +1,7 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import solidJs from '@astrojs/solid-js';
+import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,8 +9,8 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        '~': '/src'
-      }
-    }
-  }
+        "~": "/src",
+      },
+    },
+  },
 });

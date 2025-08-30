@@ -1,9 +1,15 @@
 ---
-import Layout from '~/layouts/Layout.astro';
-import '~/index.css';
-import { Text } from '~/components/ui/text';
+import Layout from "~/layouts/Layout.astro";
+import { Text } from "~/components/ui/text";
+import { Button } from "~/components/ui/button";
+import { Heading } from "~/components/ui/heading";
+import { Tabs } from "~/components/ui/tabs";
+import "~/index.css";
+import { STRATA_URL } from "~/constants";
 ---
 
 <Layout>
-	<Text>Hello</Text>
+    <Heading>Hello</Heading>
+    <a href={STRATA_URL}><Button>Click me</Button></a>
+    <Tabs />
 </Layout>
