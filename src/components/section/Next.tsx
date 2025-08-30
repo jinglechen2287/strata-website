@@ -2,7 +2,7 @@ import { Stack, Box, Grid, GridItem } from "styled-system/jsx";
 import { H2, H3 } from "../ui/heading";
 import { SectionContainer } from "./SectionContainer";
 import { Text } from "../ui/text";
-import { Show } from "solid-js";
+import { Show, For } from "solid-js";
 
 type TimelineSide = "left" | "right";
 
@@ -80,7 +80,7 @@ const TimelineItem = (props: { item: TimelineItemData }) => {
         <Grid columns={2} position="relative">
             <Show when={isLeft} fallback={<GridItem colSpan={1} />}>
                 <GridItem colSpan={1}>
-                    <Stack alignItems="flex-end" gap={3} paddingRight="36px">
+                    <Stack alignItems="flex-end" gap={3} paddingRight="4" sm={{ paddingRight: "9" }}>
                         {item.status ? <Pill value={item.status} /> : null}
                         <Stack gap={0.5}>
                             <H3 textAlign="right" margin="0">
@@ -98,7 +98,7 @@ const TimelineItem = (props: { item: TimelineItemData }) => {
 
             <Show when={!isLeft} fallback={<GridItem colSpan={1} />}>
                 <GridItem colSpan={1}>
-                    <Stack gap={3} paddingLeft="36px">
+                    <Stack gap={3} paddingLeft="4" sm={{ paddingLeft: "9" }}>
                         {item.status ? <Pill value={item.status} /> : null}
                         <Stack gap={0.5}>
                             <H3 textAlign="left" margin="0">
@@ -121,7 +121,7 @@ const VerticalLine = () => {
             position="absolute"
             left="50%"
             top="14px"
-            height="428px"
+            height="calc(100% - 28px)"
             width="2px"
             transform="translateX(-50%)"
             background="border.default"
@@ -145,12 +145,14 @@ export const Next = () => {
                 <Box position="relative" maxWidth="1200px" margin="0 auto">
                     <VerticalLine />
 
-                    <Stack gap={12}>
-                        {timelineItems.map((item) => (
-                            <Box position="relative">
-                                <TimelineItem item={item} />
-                            </Box>
-                        ))}
+                    <Stack gap={12} marginX="-4" sm={{ marginX: "0" }} >
+                        <For each={timelineItems}>
+                            {(item) => (
+                                <Box position="relative">
+                                    <TimelineItem item={item} />
+                                </Box>
+                            )}
+                        </For>
                     </Stack>
                 </Box>
             </Stack>

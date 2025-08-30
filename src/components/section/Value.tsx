@@ -19,7 +19,7 @@ export const DesignEasily = () => {
                     </Text>
                 </Stack>
                 <Box
-                    marginX="4"
+                    marginX="0"
                     sm={{ marginX: "4vw" }}
                     md={{ marginX: "10vw" }}
                 >
@@ -42,7 +42,7 @@ export const DesignEasily = () => {
 export const ShareEasily = () => {
     const Platforms = (props: { platform: "Web" | "Mobile" | "Headset" }) => {
         return (
-            <Stack gap="2.5" alignItems="center">
+            <Stack gap="2.5" alignItems="center" width="20">
                 <Switch>
                     <Match when={props.platform === "Web"}>
                         <Chromium size={40} strokeWidth={1.92} />
@@ -56,8 +56,8 @@ export const ShareEasily = () => {
                 </Switch>
                 <Text>{props.platform}</Text>
             </Stack>
-        )
-    }
+        );
+    };
     return (
         <SectionContainer>
             <Stack maxWidth="1200px" margin="0 auto" gap={8}>
@@ -68,7 +68,17 @@ export const ShareEasily = () => {
                         device, no download.
                     </Text>
                 </Stack>
-                <HStack width="100%" maxWidth="560px" margin="0 auto" justifyContent="space-between" paddingY="20">
+                <HStack
+                    width="100%"
+                    maxWidth="480px"
+                    margin="0 auto"
+                    justifyContent="center"
+                    paddingY="10"
+                    paddingX="8"
+                    flexWrap="wrap"
+                    gap={12}
+                    sm={{paddingY: "20", paddingX: "0", justifyContent: "space-between"}}
+                >
                     <Platforms platform="Web" />
                     <Platforms platform="Mobile" />
                     <Platforms platform="Headset" />

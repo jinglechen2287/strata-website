@@ -77,7 +77,7 @@ export const Examples = () => {
             <Stack maxWidth="1200px" margin="0 auto" gap={7}>
                 <H2>Explore the latest examples</H2>
                 <Stack
-                    marginX="4"
+                    marginX="0"
                     gap={6}
                     sm={{ marginX: "4vw" }}
                     md={{ marginX: "10vw" }}

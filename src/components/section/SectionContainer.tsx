@@ -17,7 +17,7 @@ const SectionBg = () => {
 
 export const SectionContainer = (props: ParentProps) => {
     return (
-        <Stack width="100%" margin="0 auto" paddingY="60px" position="relative">
+        <Stack width="100%" margin="0 auto" paddingY="60px" paddingX={8} position="relative">
             <SectionBg />
             <Box zIndex={1}>{props.children}</Box>
         </Stack>

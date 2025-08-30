@@ -7,14 +7,14 @@ import { STRATA_APP_URL } from "~/constants";
 
 export const Hero = () => {
     return (
-        <Stack gap={10} paddingTop="120px" paddingBottom="160px">
+        <Stack gap={10} paddingTop="120px" paddingBottom="160px" paddingX={8}>
             <Stack gap={5}>
                 <H1>Create and share spatial designs in minutes.</H1>
-                <HStack justifyContent="center" gap={6}>
+                <Stack justifyContent="center" gap={2} sm={{ flexDirection: "row", gap: 6 }} >
                     <Highlight text="Web-based" />
                     <Highlight text="Real-time" />
                     <Highlight text="Designer-friendly" />
-                </HStack>
+                </Stack>
             </Stack>
             <Box margin="0 auto">
                 <a href={STRATA_APP_URL} target="_blank">
