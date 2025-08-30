@@ -6,6 +6,8 @@ import { css } from "styled-system/css";
 import { Button } from "../ui/button";
 import { STRATA_URL } from "~/constants";
 import { SectionContainer } from "./SectionContainer";
+import { Text } from "../ui/text";
+import { Kbd } from "../ui/kbd";
 
 export const Examples = () => {
     const [selectedExample, setSelectedExample] = createSignal("1");
@@ -33,15 +35,23 @@ export const Examples = () => {
                     <Tabs.Indicator backgroundColor="fg.default" />
                 </Tabs.List>
                 <Tabs.Content value="1" width="100%">
-                    <StrataDesignIframe src={STRATA_URL + "examples/1/view"} />
+                    <IframeHint />
+                    <Iframe src={STRATA_URL + "examples/1/embed"} />
                 </Tabs.Content>
                 <Tabs.Content value="2" width="100%">
-                    <StrataDesignIframe src={STRATA_URL + "examples/2/view"} />
+                    <IframeHint />
+                    <Iframe src={STRATA_URL + "examples/2/embed"} />
                 </Tabs.Content>
             </Tabs.Root>
         );
     };
-    const StrataDesignIframe = (props: { src: string }) => {
+    const IframeHint = () => (
+        <Text textAlign="center" marginBottom="2" color="fg.muted">
+            <Kbd>Drag</Kbd> to look around and press <Kbd>W</Kbd> <Kbd>A</Kbd>{" "}
+            <Kbd>S</Kbd> <Kbd>D</Kbd> keys to move
+        </Text>
+    );
+    const Iframe = (props: { src: string }) => {
         return (
             <iframe
                 src={props.src}
