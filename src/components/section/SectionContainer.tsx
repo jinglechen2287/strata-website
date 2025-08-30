@@ -10,7 +10,7 @@ const SectionBg = () => {
             width="100%"
             height="240px"
             zIndex={0}
-            background="linear-gradient(180deg, #313131 0%, rgba(41, 41, 41, 0.88) 25%, rgba(25, 25, 25, 0.00) 100%)"
+            background="linear-gradient(180deg,rgb(30, 30, 30) 0%, rgba(20, 20, 20, 0.00) 100%)"
         />
     );
 };

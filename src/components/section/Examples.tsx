@@ -34,11 +34,11 @@ export const Examples = () => {
                     </For>
                     <Tabs.Indicator backgroundColor="fg.default" />
                 </Tabs.List>
-                <Tabs.Content value="1" width="100%">
+                <Tabs.Content value="1" width="100%" paddingTop="0 !important">
                     <IframeHint />
                     <Iframe src={STRATA_URL + "examples/1/embed"} />
                 </Tabs.Content>
-                <Tabs.Content value="2" width="100%">
+                <Tabs.Content value="2" width="100%" paddingTop="0 !important">
                     <IframeHint />
                     <Iframe src={STRATA_URL + "examples/2/embed"} />
                 </Tabs.Content>
@@ -46,7 +46,7 @@ export const Examples = () => {
         );
     };
     const IframeHint = () => (
-        <Text textAlign="center" marginBottom="2" color="fg.muted">
+        <Text textAlign="center" marginY="5" color="fg.muted">
             <Kbd>Drag</Kbd> to look around and press <Kbd>W</Kbd> <Kbd>A</Kbd>{" "}
             <Kbd>S</Kbd> <Kbd>D</Kbd> keys to move
         </Text>
@@ -93,7 +93,7 @@ export const Examples = () => {
                             }
                             target="_blank"
                         >
-                            <Button variant="solid" size="md">
+                            <Button variant="subtle" colorPalette="white" size="md">
                                 Open Editor
                             </Button>
                         </a>

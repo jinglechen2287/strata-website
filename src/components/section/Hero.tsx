@@ -4,6 +4,7 @@ import { Check } from "lucide-solid";
 import { Button } from "~/components/ui/button";
 import { Text } from "~/components/ui/text";
 import { STRATA_APP_URL } from "~/constants";
+import PrimaryButton from "~/components/ui/primaryButton";
 
 export const Hero = () => {
     return (
@@ -18,9 +19,7 @@ export const Hero = () => {
             </Stack>
             <Box margin="0 auto">
                 <a href={STRATA_APP_URL} target="_blank">
-                    <Button variant="solid" size="lg" width="fit-content">
-                        Get Started
-                    </Button>
+                    <PrimaryButton />
                 </a>
             </Box>
         </Stack>

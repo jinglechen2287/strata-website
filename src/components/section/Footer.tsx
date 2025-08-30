@@ -2,8 +2,8 @@ import { Box, Stack, Center } from "styled-system/jsx";
 import { Text } from "~/components/ui/text";
 import { Link } from "~/components/ui/link";
 import { H2 } from "../ui/heading";
-import { Button } from "../ui/button";
 import { STRATA_APP_URL } from "~/constants";
+import PrimaryButton from "~/components/ui/primaryButton";
 
 const FooterBg = () => {
     return (
@@ -32,11 +32,9 @@ export const Footer = () => {
 
                 <Stack gap={2} alignItems="center">
                     <a href={STRATA_APP_URL} target="_blank">
-                        <Button variant="solid" size="lg" width="fit-content">
-                            Get Started
-                        </Button>
+                        <PrimaryButton />
                     </a>
-                    <Text textAlign="center" size="sm">
+                    <Text textAlign="center" size="sm" marginTop="-6">
                         {"it's free :)"}
                     </Text>
                 </Stack>
