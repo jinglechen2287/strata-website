@@ -59,6 +59,7 @@ export const Examples = () => {
                 allow="vr; xr; gamepad; fullscreen; accelerometer; gyroscope; autoplay;"
                 class={css({
                     maxWidth: "1200px",
+                    width: "100%",
                     aspectRatio: "2/3",
                     display: "block",
                     margin: "0 auto",
