@@ -1,15 +1,20 @@
 ---
 import Layout from "~/layouts/Layout.astro";
-import { Text } from "~/components/ui/text";
-import { Button } from "~/components/ui/button";
-import { Heading } from "~/components/ui/heading";
-import { Tabs } from "~/components/ui/tabs";
+import { Header } from "~/components/section/Header";
+import { Hero } from "~/components/section/Hero";
+import { Examples } from "~/components/section/Examples";
+import { Footer } from "~/components/section/Footer";
+import { DesignEasily, ShareEasily } from "~/components/section/Value";
+import { Next } from "~/components/section/Next";
 import "~/index.css";
-import { STRATA_URL } from "~/constants";
 ---
 
 <Layout>
-    <Heading>Hello</Heading>
-    <a href={STRATA_URL}><Button>Click me</Button></a>
-    <Tabs />
+    <Header />
+    <Hero />
+    <Examples client:load />
+    <DesignEasily client:load />
+    <ShareEasily client:load />
+    <Next client:load />
+    <Footer client:load />
 </Layout>
