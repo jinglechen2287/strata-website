@@ -1,4 +1,4 @@
-import { createSignal, For } from "solid-js";
+import { createSignal, For, Show } from "solid-js";
 import { Tabs } from "~/components/ui/tabs";
 import { Stack, Box } from "styled-system/jsx";
 import { H2 } from "~/components/ui/heading";
@@ -35,42 +35,51 @@ export const Examples = () => {
                     <Tabs.Indicator backgroundColor="fg.default" />
                 </Tabs.List>
                 <Tabs.Content value="1" width="100%" paddingTop="0 !important">
-                    <Iframe src={STRATA_URL + "examples/1/embed"} />
+                    <Iframe id="1" />
                     <IframeHint />
                 </Tabs.Content>
                 <Tabs.Content value="2" width="100%" paddingTop="0 !important">
-                    <Iframe src={STRATA_URL + "examples/2/embed"} />
+                    <Iframe id="2" />
                     <IframeHint />
                 </Tabs.Content>
             </Tabs.Root>
         );
     };
     const IframeHint = () => (
-        <Text textAlign="center" marginTop="5" marginBottom="2" color="fg.muted">
+        <Text
+            textAlign="center"
+            marginTop="5"
+            marginBottom="2"
+            color="fg.muted"
+        >
             <Kbd>Drag</Kbd> to look around and press <Kbd>W</Kbd> <Kbd>A</Kbd>{" "}
             <Kbd>S</Kbd> <Kbd>D</Kbd> keys to move
         </Text>
     );
-    const Iframe = (props: { src: string }) => {
+    const Iframe = (props: { id: string }) => {
+        const src = STRATA_URL + "examples/" + props.id + "/embed";
         return (
-            <iframe
-                src={props.src}
-                allowfullscreen
-                allow="vr; xr; gamepad; fullscreen; accelerometer; gyroscope; autoplay;"
-                class={css({
-                    maxWidth: "1200px",
-                    width: "100%",
-                    aspectRatio: "2/3",
-                    display: "block",
-                    margin: "0 auto",
-                    marginTop: "8",
-                    borderRadius: "lg",
-                    boxShadow: "16px 16px 24px rgb(16, 16, 16), -16px -16px 24px rgb(36, 36, 36)",
-                    sm: {
-                        aspectRatio: "16/9",
-                    },
-                })}
-            ></iframe>
+            <Show when={selectedExample() === props.id}>
+                <iframe
+                    src={src}
+                    allowfullscreen
+                    allow="vr; xr; gamepad; fullscreen; accelerometer; gyroscope; autoplay;"
+                    class={css({
+                        maxWidth: "1200px",
+                        width: "100%",
+                        aspectRatio: "2/3",
+                        display: "block",
+                        margin: "0 auto",
+                        marginTop: "8",
+                        borderRadius: "lg",
+                        boxShadow:
+                            "16px 16px 24px rgb(16, 16, 16), -16px -16px 24px rgb(36, 36, 36)",
+                        sm: {
+                            aspectRatio: "16/9",
+                        },
+                    })}
+                ></iframe>
+            </Show>
         );
     };
 
@@ -96,7 +105,11 @@ export const Examples = () => {
                             }
                             target="_blank"
                         >
-                            <Button variant="subtle" colorPalette="white" size="md">
+                            <Button
+                                variant="subtle"
+                                colorPalette="white"
+                                size="md"
+                            >
                                 Open Example
                             </Button>
                         </a>
