@@ -35,18 +35,18 @@ export const Examples = () => {
                     <Tabs.Indicator backgroundColor="fg.default" />
                 </Tabs.List>
                 <Tabs.Content value="1" width="100%" paddingTop="0 !important">
-                    <IframeHint />
                     <Iframe src={STRATA_URL + "examples/1/embed"} />
+                    <IframeHint />
                 </Tabs.Content>
                 <Tabs.Content value="2" width="100%" paddingTop="0 !important">
-                    <IframeHint />
                     <Iframe src={STRATA_URL + "examples/2/embed"} />
+                    <IframeHint />
                 </Tabs.Content>
             </Tabs.Root>
         );
     };
     const IframeHint = () => (
-        <Text textAlign="center" marginY="5" color="fg.muted">
+        <Text textAlign="center" marginTop="5" marginBottom="2" color="fg.muted">
             <Kbd>Drag</Kbd> to look around and press <Kbd>W</Kbd> <Kbd>A</Kbd>{" "}
             <Kbd>S</Kbd> <Kbd>D</Kbd> keys to move
         </Text>
@@ -63,8 +63,9 @@ export const Examples = () => {
                     aspectRatio: "2/3",
                     display: "block",
                     margin: "0 auto",
-                    marginTop: "2",
-                    borderRadius: "md",
+                    marginTop: "8",
+                    borderRadius: "lg",
+                    boxShadow: "16px 16px 24px rgb(16, 16, 16), -16px -16px 24px rgb(36, 36, 36)",
                     sm: {
                         aspectRatio: "16/9",
                     },
@@ -79,6 +80,7 @@ export const Examples = () => {
                 <H2>Explore the latest examples</H2>
                 <Stack
                     marginX="0"
+                    marginBottom="4"
                     gap={6}
                     sm={{ marginX: "4vw" }}
                     md={{ marginX: "10vw" }}

@@ -1,9 +1,7 @@
 import { H1 } from "~/components/ui/heading";
-import { Stack, HStack, Box } from "styled-system/jsx";
+import { Stack, HStack, Box, Center } from "styled-system/jsx";
 import { Check } from "lucide-solid";
-import { Button } from "~/components/ui/button";
 import { Text } from "~/components/ui/text";
-import { STRATA_APP_URL } from "~/constants";
 import PrimaryButton from "~/components/ui/primaryButton";
 
 export const Hero = () => {
@@ -11,17 +9,21 @@ export const Hero = () => {
         <Stack gap={10} paddingTop="120px" paddingBottom="160px" paddingX={8}>
             <Stack gap={5}>
                 <H1>Create and share spatial designs in minutes.</H1>
-                <Stack justifyContent="center" gap={2} sm={{ flexDirection: "row", gap: 6 }} >
+                <Stack
+                    justifyContent="center"
+                    gap={2}
+                    sm={{ flexDirection: "row", gap: 6 }}
+                >
                     <Highlight text="Web-based" />
                     <Highlight text="Real-time" />
                     <Highlight text="Designer-friendly" />
                 </Stack>
             </Stack>
-            <Box margin="0 auto">
-                <a href={STRATA_APP_URL} target="_blank">
+            <Center marginX="-8">
+                <Box margin="0 auto">
                     <PrimaryButton />
-                </a>
-            </Box>
+                </Box>
+            </Center>
         </Stack>
     );
 };

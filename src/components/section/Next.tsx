@@ -22,7 +22,7 @@ const timelineItems: TimelineItemData[] = [
     },
     {
         title: "Real-time Collaboration",
-        description: "Design together in real time",
+        description: "Design with your team in real time",
         status: "Coming Soon",
         side: "left",
     },
@@ -82,14 +82,22 @@ const TimelineItem = (props: { item: TimelineItemData }) => {
                 <GridItem colSpan={1}>
                     <Stack alignItems="flex-end" gap={3} paddingRight="4" sm={{ paddingRight: "9" }}>
                         {item.status ? <Pill value={item.status} /> : null}
-                        <Stack gap={0.5}>
-                            <H3 textAlign="right" margin="0">
-                                {item.title}
-                            </H3>
-                            <Text color="fg.muted" textAlign="right">
-                                {item.description}
-                            </Text>
-                        </Stack>
+                        <Box
+                            borderRadius="lg"
+                            padding="4"
+                            background="rgba(255, 255, 255, 0.04)"
+                            border="1px solid rgba(255, 255, 255, 0.12)"
+                            width="full"
+                        >
+                            <Stack gap={0.5}>
+                                <H3 textAlign="right" margin="0">
+                                    {item.title}
+                                </H3>
+                                <Text color="fg.muted" textAlign="right">
+                                    {item.description}
+                                </Text>
+                            </Stack>
+                        </Box>
                     </Stack>
                 </GridItem>
             </Show>
@@ -100,14 +108,22 @@ const TimelineItem = (props: { item: TimelineItemData }) => {
                 <GridItem colSpan={1}>
                     <Stack gap={3} paddingLeft="4" sm={{ paddingLeft: "9" }}>
                         {item.status ? <Pill value={item.status} /> : null}
-                        <Stack gap={0.5}>
-                            <H3 textAlign="left" margin="0">
-                                {item.title}
-                            </H3>
-                            <Text color="fg.muted" textAlign="left">
-                                {item.description}
-                            </Text>
-                        </Stack>
+                        <Box
+                            borderRadius="lg"
+                            padding="4"
+                            background="rgba(255, 255, 255, 0.04)"
+                            border="1px solid rgba(255, 255, 255, 0.12)"
+                            width="full"
+                        >
+                            <Stack gap={0.5}>
+                                <H3 textAlign="left" margin="0">
+                                    {item.title}
+                                </H3>
+                                <Text color="fg.muted" textAlign="left">
+                                    {item.description}
+                                </Text>
+                            </Stack>
+                        </Box>
                     </Stack>
                 </GridItem>
             </Show>
@@ -124,9 +140,33 @@ const VerticalLine = () => {
             height="calc(100% - 28px)"
             width="2px"
             transform="translateX(-50%)"
-            background="border.default"
             zIndex={1}
-        />
+        >
+            <svg viewBox="0 0 2 100" preserveAspectRatio="none" width="100%" height="100%">
+                <line
+                    x1="1"
+                    y1="0"
+                    x2="1"
+                    y2="100"
+                    stroke="url(#timelineStrokeGrad)"
+                    stroke-width="1"
+                    vector-effect="non-scaling-stroke"
+                ></line>
+            </svg>
+        </Box>
+    );
+};
+
+const TimelineDefs = () => {
+    return (
+        <svg width="0" height="0" style="position:absolute;">
+            <defs>
+                <radialGradient id="timelineStrokeGrad" cx="0" cy="0" r="56" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" style="stop-color:#484848"></stop>
+                    <stop offset="100%" style="stop-color:#303030"></stop>
+                </radialGradient>
+            </defs>
+        </svg>
     );
 };
 
@@ -134,7 +174,7 @@ export const Next = () => {
     return (
         <SectionContainer>
             <Stack maxWidth="1200px" margin="0 auto" gap={12}>
-                <Stack gap={3}>
+                <Stack gap={2}>
                     <H2>What's next</H2>
                     <Text color="fg.muted" textAlign="center">
                         Strata is constantly growing just like the possibilities
@@ -143,6 +183,7 @@ export const Next = () => {
                 </Stack>
 
                 <Box position="relative" maxWidth="1200px" margin="0 auto">
+                    <TimelineDefs />
                     <VerticalLine />
 
                     <Stack gap={12} marginX="-4" sm={{ marginX: "0" }} >
