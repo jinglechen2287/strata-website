@@ -1,5 +1,5 @@
 import { css } from "styled-system/css";
-import { STRATA_APP_URL } from "~/constants";
+import { STRATA_URL } from "~/constants";
 
 export default function PrimaryButton() {
     return (
@@ -27,7 +27,7 @@ export default function PrimaryButton() {
                     pointerEvents: "none",
                 })}
             />
-            <a href={STRATA_APP_URL} target="_blank">
+            <a href={STRATA_URL} target="_blank">
                 <button
                     class={css({
                         transform: "scale(0.5)",
@@ -93,6 +93,7 @@ export default function PrimaryButton() {
                                     "linear-gradient(to bottom, #2d2d2dff, #424242)",
                                 zIndex: 10,
                                 fontWeight: "semibold",
+                                userSelect: "none",
                             })}
                         >
                             Get Started

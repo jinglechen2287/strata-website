@@ -92,12 +92,12 @@ export const Examples = () => {
                                 STRATA_URL +
                                 "examples/" +
                                 selectedExample() +
-                                "/edit"
+                                "/view"
                             }
                             target="_blank"
                         >
                             <Button variant="subtle" colorPalette="white" size="md">
-                                Open Editor
+                                Open Example
                             </Button>
                         </a>
                     </Box>
