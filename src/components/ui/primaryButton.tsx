@@ -12,12 +12,12 @@ export default function PrimaryButton() {
             <div
                 aria-hidden="true"
                 class={css({
-                    transform: "scale(0.5)",
+                    transform: "scale(0.55)",
                     transformOrigin: "center",
                     display: "block",
                     background:
-                        "conic-gradient(purple, blue, green, yellow, orange, red)",
-                    filter: "blur(40px)",
+                        "conic-gradient(purple, deepskyblue, cyan, green, yellow, orange, red)",
+                    filter: "blur(30px)",
                     opacity: 1,
                     position: "absolute",
                     inset: "10px",
