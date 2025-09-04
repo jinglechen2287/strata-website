@@ -14,11 +14,14 @@ export const Examples = () => {
 
     const ExampleTabs = (props: Tabs.RootProps) => {
         const options = [
-            { id: "1", label: "Example 1" },
-            { id: "2", label: "Example 2" },
+            { id: "1", label: "1" },
+            { id: "2", label: "2" },
+            { id: "3", label: "3" },
+            { id: "4", label: "4" },
+            { id: "5", label: "5" },
         ];
         return (
-            <Tabs.Root defaultValue={selectedExample()} {...props}>
+            <Tabs.Root value={selectedExample()} {...props}>
                 <Tabs.List width="fit-content" margin="0 auto">
                     <For each={options}>
                         {(option) => (
@@ -40,6 +43,18 @@ export const Examples = () => {
                 </Tabs.Content>
                 <Tabs.Content value="2" width="100%" paddingTop="0 !important">
                     <Iframe id="2" />
+                    <IframeHint />
+                </Tabs.Content>
+                <Tabs.Content value="3" width="100%" paddingTop="0 !important">
+                    <Iframe id="3" />
+                    <IframeHint />
+                </Tabs.Content>
+                <Tabs.Content value="4" width="100%" paddingTop="0 !important">
+                    <Iframe id="4" />
+                    <IframeHint />
+                </Tabs.Content>
+                <Tabs.Content value="5" width="100%" paddingTop="0 !important">
+                    <Iframe id="5" />
                     <IframeHint />
                 </Tabs.Content>
             </Tabs.Root>
