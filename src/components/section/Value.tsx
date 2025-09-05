@@ -1,8 +1,9 @@
 import { SectionContainer } from "./SectionContainer";
-import { Box, Stack, HStack, Center } from "styled-system/jsx";
+import { Box, Stack, Center } from "styled-system/jsx";
 import { H2 } from "~/components/ui/heading";
 import { Text } from "~/components/ui/text";
 import StrataScreenShot from "~/assets/StrataScreenshot.png";
+import StrataVideo from "~/assets/StrataVideo.mp4";
 import { css } from "styled-system/css";
 import { Switch, Match } from "solid-js";
 import { Chromium, Smartphone, RectangleGoggles } from "lucide-solid";
@@ -25,9 +26,12 @@ export const DesignEasily = () => {
                     sm={{ marginX: "4vw" }}
                     md={{ marginX: "10vw" }}
                 >
-                    <img
-                        src={StrataScreenShot.src}
-                        alt="Spatial design made simple"
+                    <video
+                        src={StrataVideo}
+                        autoplay
+                        loop
+                        muted
+                        playsinline
                         class={css({
                             maxWidth: "1200px",
                             width: "100%",
