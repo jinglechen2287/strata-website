@@ -5,6 +5,7 @@ export const H1 = (props: HeadingProps) => {
         <Heading
             as="h1"
             fontSize="4xl"
+            color="white"
             sm={{ fontSize: "5xl" }}
             md={{ fontSize: "6xl" }}
             textAlign="center"
