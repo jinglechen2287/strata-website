@@ -1,1 +1,1 @@
-export const STRATA_URL = "https://strata-design-demo.vercel.app/";
+export const STRATA_URL = "https://app.strata-xr.com/";
