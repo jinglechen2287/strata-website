@@ -1,8 +1,8 @@
-import { Heading, type HeadingProps } from "./styled/heading";
+import { Heading as StyledHeading, type HeadingProps } from "./styled/heading";
 
 export const H1 = (props: HeadingProps) => {
     return (
-        <Heading
+        <StyledHeading
             as="h1"
             fontSize="4xl"
             color="white"
@@ -18,13 +18,13 @@ export const H1 = (props: HeadingProps) => {
 
 export const H2 = (props: HeadingProps) => {
     return (
-        <Heading
+        <StyledHeading
             as="h2"
             fontSize="2xl"
             sm={{ fontSize: "3xl" }}
             md={{ fontSize: "4xl" }}
             textAlign="center"
-            maxWidth="1200px"
+            maxWidth="1280px"
             margin="0 auto"
             {...props}
         />
@@ -33,13 +33,17 @@ export const H2 = (props: HeadingProps) => {
 
 export const H3 = (props: HeadingProps) => {
     return (
-        <Heading
+        <StyledHeading
             as="h3"
             fontSize="lg"
             textAlign="center"
-            maxWidth="1200px"
+            maxWidth="1280px"
             margin="0 auto"
             {...props}
         />
     );
+};
+
+export const Heading = (props: HeadingProps) => {
+    return <StyledHeading {...props} />;
 };

@@ -1,0 +1,205 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import { Header } from "~/components/section/Header";
+import { Heading } from "~/components/ui/heading";
+import { Text } from "~/components/ui/text";
+import "~/index.css";
+---
+
+<Layout>
+    <Header />
+    <div style="max-width: 760px; margin: 0 auto; padding: 40px 20px;">
+        <Heading as="h1" size="2xl" textAlign="left" marginBottom="24px"
+            >Privacy Policy</Heading
+        >
+
+        <Text marginTop="8px">
+            <strong>Effective Date:</strong> [09-09-2025]
+        </Text>
+        <Text marginTop="4px">
+            <strong>Operator:</strong> Jingle Chen (United States)
+        </Text>
+        <Text marginTop="4px" marginBottom="8px">
+            <strong>Contact:</strong> chenjingle0525@gmail.com
+        </Text>
+
+        <Text marginTop="16px">
+            Strata (“we,” “our,” or “us”) is committed to protecting your
+            privacy. This Privacy Policy explains what information we collect,
+            how we use it, and your rights regarding your data.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">1. Information We Collect</Heading
+        >
+        <Text
+            >We collect the following categories of information when you use
+            Strata:</Text
+        >
+        <ul
+            style="padding-left: 1.25rem; margin: 8px 0 16px; display: grid; gap: 6px;"
+        >
+            <Text as="li">
+                <strong>Identity Information:</strong> Your Google account details
+                (name, email, profile picture) via Google OAuth and Supabase.
+            </Text>
+            <Text as="li">
+                <strong>Project Data:</strong> Project names and assets you upload
+                (e.g., images, .glb files, and other media).
+            </Text>
+            <Text as="li">
+                <strong>Device Information:</strong> Device type, screen resolution,
+                and technical specifications.
+            </Text>
+            <Text as="li">
+                <strong>XR Input Data:</strong> Camera and hand-tracking access (when
+                explicitly granted by you for tool functionality).
+            </Text>
+            <Text as="li">
+                <strong>No Payment Data:</strong> At this time, we do not process
+                payments or collect billing information.
+            </Text>
+        </ul>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">2. How We Use Information</Heading
+        >
+        <Text>We use the information above for the following purposes:</Text>
+        <ul
+            style="padding-left: 1.25rem; margin: 8px 0 16px; display: grid; gap: 6px;"
+        >
+            <Text as="li">Provide and maintain the Strata service.</Text>
+            <Text as="li">Improve and personalize user experience.</Text>
+            <Text as="li">Analyze usage patterns and debug issues.</Text>
+            <Text as="li"
+                >Communicate with you regarding updates, support, and marketing.</Text
+            >
+        </ul>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">3. Data Sharing and Disclosure</Heading
+        >
+        <Text
+            >We do <strong>not sell or share personal information</strong> with advertisers
+            or unrelated third parties.</Text
+        >
+        <Text
+            >We only share data with trusted <strong>service providers</strong> necessary
+            to operate Strata, including:</Text
+        >
+        <ul
+            style="padding-left: 1.25rem; margin: 8px 0 16px; display: grid; gap: 6px;"
+        >
+            <Text as="li"
+                ><strong>Supabase</strong> (user authentication and storage).</Text
+            >
+            <Text as="li"
+                ><strong>Google OAuth</strong> (sign-in services).</Text
+            >
+            <Text as="li"
+                ><strong>Analytics providers</strong> (performance monitoring).</Text
+            >
+        </ul>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">4. Data Retention</Heading
+        >
+        <Text>
+            We retain your data as long as your account is active or as needed
+            to provide services. You may request deletion of your data or
+            account at any time by contacting us at <strong
+                >chenjingle0525@gmail.com</strong
+            >.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">5. Children’s Privacy</Heading
+        >
+        <Text>
+            Strata is intended for users <strong
+                >13 years of age or older</strong
+            >. We do not knowingly collect information from children under 13.
+            If we discover such data, it will be deleted immediately.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">6. Security</Heading
+        >
+        <Text>
+            We take reasonable measures to protect your information, but no
+            system is completely secure. Use Strata at your own risk.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">7. Your Rights</Heading
+        >
+        <Text>Depending on your jurisdiction, you may have rights to:</Text>
+        <ul
+            style="padding-left: 1.25rem; margin: 8px 0 16px; display: grid; gap: 6px;"
+        >
+            <Text as="li">Access a copy of your data.</Text>
+            <Text as="li">Request corrections.</Text>
+            <Text as="li">Request deletion of your data.</Text>
+        </ul>
+        <Text>
+            Contact us at <strong>chenjingle0525@gmail.com</strong> to exercise these
+            rights.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">8. Changes to this Privacy Policy</Heading
+        >
+        <Text>
+            We may update this Privacy Policy from time to time. Material
+            changes will be communicated within the Strata service or via email.
+        </Text>
+    </div>
+</Layout>

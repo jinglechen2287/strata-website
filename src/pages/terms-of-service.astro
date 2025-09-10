@@ -1,0 +1,189 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import { Header } from "~/components/section/Header";
+import { Heading } from "~/components/ui/heading";
+import { Text } from "~/components/ui/text";
+import "~/index.css";
+---
+
+<Layout>
+    <Header />
+    <div style="max-width: 760px; margin: 0 auto; padding: 40px 20px;">
+        <Heading as="h1" size="2xl" textAlign="left" marginBottom="24px"
+            >Terms of Service</Heading
+        >
+
+        <Text marginTop="8px">
+            <strong>Effective Date:</strong> [09-09-2025]
+        </Text>
+        <Text marginTop="4px">
+            <strong>Operator:</strong> Jingle Chen (United States)
+        </Text>
+        <Text marginTop="4px" marginBottom="8px">
+            <strong>Contact:</strong> chenjingle0525@gmail.com
+        </Text>
+
+        <Text marginTop="16px">
+            Welcome to Strata. By accessing or using Strata, you agree to these
+            Terms of Service. If you do not agree, do not use the service.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">1. Eligibility</Heading
+        >
+        <Text>
+            You must be <strong>13 years or older</strong> to use Strata. By using
+            the service, you represent and warrant that you meet this requirement.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">2. User Accounts</Heading
+        >
+        <Text>
+            When signing in via Google OAuth, you must provide accurate
+            information. You are responsible for maintaining the security of
+            your credentials and for all activity under your account.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">3. Acceptable Use</Heading
+        >
+        <Text
+            >You agree not to misuse Strata. Prohibited activities include:</Text
+        >
+        <ul
+            style="padding-left: 1.25rem; margin: 8px 0 16px; display: grid; gap: 6px;"
+        >
+            <Text as="li"
+                >Engaging in illegal activity, harassment, or intellectual
+                property infringement.</Text
+            >
+            <Text as="li"
+                >Reverse engineering, attempting unauthorized access, or
+                interfering with Strata’s infrastructure.</Text
+            >
+            <Text as="li"
+                >Uploading harmful, malicious, or inappropriate content.</Text
+            >
+            <Text as="li"
+                >Creating XR experiences that irresponsibly <strong
+                    >block or obscure a user’s field of view</strong
+                >, or pose safety risks.</Text
+            >
+        </ul>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">4. User Content</Heading
+        >
+        <Text>
+            You retain ownership of the content you upload to Strata. By
+            uploading, you grant Strata a limited license to store and process
+            your content for the purpose of providing the service. You are
+            solely responsible for your content.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">5. Disclaimers & Limitation of Liability</Heading
+        >
+        <ul
+            style="padding-left: 1.25rem; margin: 8px 0 16px; display: grid; gap: 6px;"
+        >
+            <Text as="li"
+                >Strata is provided <strong>“as is”</strong> without warranties of
+                any kind.</Text
+            >
+            <Text as="li">We are not responsible for:</Text>
+            <ul
+                style="padding-left: 1.25rem; margin: 6px 0; display: grid; gap: 4px;"
+            >
+                <Text as="li">User-generated content.</Text>
+                <Text as="li">Damages arising from misuse of Strata.</Text>
+                <Text as="li">XR-related injuries or unsafe usage.</Text>
+                <Text as="li"
+                    >Service interruptions, bugs, or availability issues.</Text
+                >
+            </ul>
+            <Text as="li"
+                >To the fullest extent permitted by law, our liability is
+                limited.</Text
+            >
+        </ul>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">6. Termination</Heading
+        >
+        <Text>
+            We may suspend or terminate accounts that violate these Terms or
+            engage in harmful behavior. You may stop using Strata at any time by
+            discontinuing your account.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">7. Governing Law</Heading
+        >
+        <Text>
+            These Terms are governed by the laws of the <strong
+                >United States and the State of Michigan</strong
+            >, without regard to conflict-of-law principles.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">8. Modifications to Terms</Heading
+        >
+        <Text>
+            We may update these Terms from time to time. If material changes are
+            made, we will notify users through Strata or via email. Continued
+            use of the service indicates acceptance of the new Terms.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+    </div>
+</Layout>

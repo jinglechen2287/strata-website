@@ -173,7 +173,7 @@ const TimelineDefs = () => {
 export const Next = () => {
     return (
         <SectionContainer>
-            <Stack maxWidth="1200px" margin="0 auto" gap={12}>
+            <Stack maxWidth="1280px" margin="0 auto" gap={12}>
                 <Stack gap={2}>
                     <H2>What's next</H2>
                     <Text color="fg.muted" textAlign="center">
@@ -182,7 +182,7 @@ export const Next = () => {
                     </Text>
                 </Stack>
 
-                <Box position="relative" maxWidth="1200px" margin="0 auto">
+                <Box position="relative" maxWidth="1280px" margin="0 auto">
                     <TimelineDefs />
                     <VerticalLine />
 

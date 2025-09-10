@@ -1,4 +1,4 @@
-import { Box, Stack, Center } from "styled-system/jsx";
+import { Box, Stack } from "styled-system/jsx";
 import { Text } from "~/components/ui/text";
 import { Link } from "~/components/ui/link";
 import { H2 } from "../ui/heading";
@@ -21,7 +21,7 @@ const FooterBg = () => {
 export const Footer = () => {
     return (
         <footer>
-            <Stack maxWidth="1200px" margin="0 auto" paddingY="120px" gap={12}>
+            <Stack maxWidth="1280px" margin="0 auto" paddingY="120px" gap={12}>
                 <Stack gap={3}>
                     <H2>Ready to Strata?</H2>
                     <Text color="fg.muted" textAlign="center">
@@ -37,11 +37,18 @@ export const Footer = () => {
                 </Stack>
             </Stack>
             <Stack
+                flexDirection="column"
+                gap={8}
+                maxWidth="1280px"
                 margin="0 auto"
                 paddingY="5"
+                paddingX="8"
                 borderTopWidth="1px"
                 borderTopStyle="solid"
                 borderTopColor="border.muted"
+                justifyContent="space-between"
+                sm={{ flexDirection: "row" }}
+                xl={{ paddingX: "0" }}
             >
                 <Text textAlign="center" color="fg.muted">
                     Made by{" "}
@@ -54,6 +61,28 @@ export const Footer = () => {
                     </Link>
                     . All rights reserved.
                 </Text>
+                <Stack
+                    flexDirection="column"
+                    sm={{ flexDirection: "row", gap: 8 }}
+                    justifyContent="center"
+                >
+                    <Link
+                        href="/privacy-policy"
+                        color="fg.muted"
+                        fontWeight="normal"
+                        marginX="auto"
+                    >
+                        Privacy Policy
+                    </Link>
+                    <Link
+                        href="/terms-of-service"
+                        color="fg.muted"
+                        fontWeight="normal"
+                        marginX="auto"
+                    >
+                        Terms of Service
+                    </Link>
+                </Stack>
             </Stack>
         </footer>
     );

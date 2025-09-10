@@ -11,7 +11,7 @@ import { Chromium, Smartphone, RectangleGoggles } from "lucide-solid";
 export const DesignEasily = () => {
     return (
         <SectionContainer>
-            <Stack maxWidth="1200px" margin="0 auto" gap={12}>
+            <Stack maxWidth="1280px" margin="0 auto" gap={12}>
                 <Stack gap={2}>
                     <H2>Spatial design made simple</H2>
                     <Text color="fg.muted" textAlign="center">
@@ -33,12 +33,11 @@ export const DesignEasily = () => {
                         muted
                         playsinline
                         class={css({
-                            maxWidth: "1200px",
+                            maxWidth: "1280px",
                             width: "100%",
                             margin: "0 auto",
                             borderRadius: "lg",
-                            boxShadow:
-                                "16px 16px 24px rgb(16, 16, 16), -16px -16px 24px rgb(36, 36, 36)",
+                            boxShadow: "0px 0px 24px rgb(36, 36, 36)",
                         })}
                     />
                 </Box>
@@ -136,7 +135,12 @@ export const ShareEasily = () => {
     };
     return (
         <SectionContainer>
-            <Stack maxWidth="1200px" margin="0 auto" justifyContent="center" gap={8}>
+            <Stack
+                maxWidth="1280px"
+                margin="0 auto"
+                justifyContent="center"
+                gap={8}
+            >
                 <Stack gap={2}>
                     <H2>Share with anyone easily</H2>
                     <Text color="fg.muted" textAlign="center">
