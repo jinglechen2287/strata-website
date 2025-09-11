@@ -1,6 +1,7 @@
 ---
 import "~/index.css";
-import Analytics from '@vercel/analytics/astro'
+import { STRATA_URL } from "~/constants";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <!doctype html>
@@ -8,9 +9,39 @@ import Analytics from '@vercel/analytics/astro'
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
+        <meta
+            name="description"
+            content="Strata is a web-based real-time spatial design tool that lets you create, edit, and share designs in minutes."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="generator" content={Astro.generator} />
+
+        <meta
+            property="og:title"
+            content="Strata - Spatial Design tool you will love"
+        />
+        <meta
+            property="og:description"
+            content="Strata is a web-based real-time spatial design tool that lets you create, edit, and share designs in minutes."
+        />
+        <meta property="og:image" content="/strataSocialImage.png" />
+        <meta property="og:url" content={STRATA_URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Strata" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Strata - Spatial Design tool you will love"
+        />
+        <meta
+            name="twitter:description"
+            content="Strata is a web-based real-time spatial design tool that lets you create, edit, and share designs in minutes."
+        />
+        <meta name="twitter:image" content="/strataSocialImage.png" />
+
         <link rel="icon" type="image/svg+xml" href="/strata.svg" />
         <link rel="icon" type="image/png" href="/strata.png" />
-        <meta name="generator" content={Astro.generator} />
         <title>Strata - Spatial Design tool you will love</title>
     </head>
     <body>
@@ -25,6 +56,6 @@ import Analytics from '@vercel/analytics/astro'
         margin: 0;
         width: 100%;
         height: 100%;
-        background-color: #0D0D0D;
+        background-color: #0d0d0d;
     }
 </style>

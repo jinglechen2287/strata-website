@@ -4,7 +4,7 @@ import { Stack, Box } from "styled-system/jsx";
 import { H2 } from "~/components/ui/heading";
 import { css } from "styled-system/css";
 import { Button } from "../ui/button";
-import { STRATA_URL } from "~/constants";
+import { STRATA_APP_URL } from "~/constants";
 import { SectionContainer } from "./SectionContainer";
 import { Text } from "../ui/text";
 import { Kbd } from "../ui/kbd";
@@ -72,7 +72,7 @@ export const Examples = () => {
         </Text>
     );
     const Iframe = (props: { id: string }) => {
-        const src = STRATA_URL + "examples/" + props.id + "/embed";
+        const src = STRATA_APP_URL + "examples/" + props.id + "/embed";
         return (
             <Show when={selectedExample() === props.id}>
                 <iframe
@@ -112,7 +112,7 @@ export const Examples = () => {
                     <Box width="fit-content" margin="0 auto">
                         <a
                             href={
-                                STRATA_URL +
+                                STRATA_APP_URL +
                                 "examples/" +
                                 selectedExample() +
                                 "/view"
