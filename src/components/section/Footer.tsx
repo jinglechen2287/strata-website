@@ -36,54 +36,57 @@ export const Footer = () => {
                     </Text>
                 </Stack>
             </Stack>
-            <Stack
-                flexDirection="column"
-                gap={8}
-                maxWidth="1280px"
-                margin="0 auto"
-                paddingY="5"
-                paddingX="8"
+            <Box
                 borderTopWidth="1px"
                 borderTopStyle="solid"
                 borderTopColor="border.muted"
-                justifyContent="space-between"
-                sm={{ flexDirection: "row" }}
-                xl={{ paddingX: "0" }}
             >
-                <Text textAlign="center" color="fg.muted">
-                    Made by{" "}
-                    <Link
-                        href="https://www.linkedin.com/in/jingle-chen/"
-                        color="fg.muted"
-                        target="_blank"
-                    >
-                        Jingle
-                    </Link>
-                    . All rights reserved.
-                </Text>
                 <Stack
                     flexDirection="column"
-                    sm={{ flexDirection: "row", gap: 8 }}
-                    justifyContent="center"
+                    gap={8}
+                    maxWidth="1280px"
+                    margin="0 auto"
+                    paddingY="5"
+                    paddingX="8"
+                    justifyContent="space-between"
+                    sm={{ flexDirection: "row" }}
+                    xl={{ paddingX: "0" }}
                 >
-                    <Link
-                        href="/privacy-policy"
-                        color="fg.muted"
-                        fontWeight="normal"
-                        marginX="auto"
+                    <Text textAlign="center" color="fg.muted">
+                        Made by{" "}
+                        <Link
+                            href="https://www.linkedin.com/in/jingle-chen/"
+                            color="fg.muted"
+                            target="_blank"
+                        >
+                            Jingle
+                        </Link>
+                        . All rights reserved.
+                    </Text>
+                    <Stack
+                        flexDirection="column"
+                        sm={{ flexDirection: "row", gap: 8 }}
+                        justifyContent="center"
                     >
-                        Privacy Policy
-                    </Link>
-                    <Link
-                        href="/terms-of-service"
-                        color="fg.muted"
-                        fontWeight="normal"
-                        marginX="auto"
-                    >
-                        Terms of Service
-                    </Link>
+                        <Link
+                            href="/privacy-policy"
+                            color="fg.muted"
+                            fontWeight="normal"
+                            marginX="auto"
+                        >
+                            Privacy Policy
+                        </Link>
+                        <Link
+                            href="/terms-of-service"
+                            color="fg.muted"
+                            fontWeight="normal"
+                            marginX="auto"
+                        >
+                            Terms of Service
+                        </Link>
+                    </Stack>
                 </Stack>
-            </Stack>
+            </Box>
         </footer>
     );
 };
