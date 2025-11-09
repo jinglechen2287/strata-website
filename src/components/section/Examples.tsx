@@ -18,7 +18,6 @@ export const Examples = () => {
             { id: "2", label: "2" },
             { id: "3", label: "3" },
             { id: "4", label: "4" },
-            { id: "5", label: "5" },
         ];
         return (
             <Tabs.Root value={selectedExample()} {...props}>
@@ -87,7 +86,7 @@ export const Examples = () => {
                         margin: "0 auto",
                         marginTop: "8",
                         borderRadius: "lg",
-                        boxShadow: "0px 0px 24px rgb(36, 36, 36)",
+                        boxShadow: "0px 0px 12px rgb(36, 36, 36)",
                         sm: {
                             aspectRatio: "16/9",
                         },

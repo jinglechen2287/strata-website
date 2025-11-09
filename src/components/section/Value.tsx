@@ -37,7 +37,7 @@ export const DesignEasily = () => {
                             width: "100%",
                             margin: "0 auto",
                             borderRadius: "lg",
-                            boxShadow: "0px 0px 24px rgb(36, 36, 36)",
+                            boxShadow: "0px 0px 12px rgb(36, 36, 36)",
                         })}
                     />
                 </Box>
