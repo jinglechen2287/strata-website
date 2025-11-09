@@ -13,44 +13,16 @@ type TimelineItemData = {
     side: TimelineSide;
 };
 
-const timelineItems: TimelineItemData[] = [
-    {
-        title: "Smart Object Layouts",
-        description: "No more alignment headaches",
-        status: "Coming Soon",
-        side: "right",
-    },
-    {
-        title: "Real-time Collaboration",
-        description: "Design with your team in real time",
-        status: "Coming Soon",
-        side: "left",
-    },
-    {
-        title: "Animation",
-        description: "Graceful transition between states",
-        status: "Coming Soon",
-        side: "right",
-    },
-    {
-        title: "Immersive Authoring",
-        description: "Design and collaborate immersively",
-        status: "Coming Soon",
-        side: "left",
-    },
-];
-
 const Pill = (props: { value: string }) => (
     <Box
         width="fit-content"
         display="inline-block"
         paddingX="2.5"
-        height="28px"
         borderRadius="full"
-        background="rgba(255, 255, 255, 0.06)"
+        background={props.value.includes("Delivered") ? "green" : "rgba(255, 255, 255, 0.06)"}
         border="1px solid rgba(255, 255, 255, 0.16)"
     >
-        <Text fontSize="xs" color="fg.muted" lineHeight="28px">
+        <Text fontSize="xs" color={props.value.includes("Delivered") ? "fg.default" : "fg.muted"} lineHeight="28px">
             {props.value}
         </Text>
     </Box>
@@ -171,6 +143,33 @@ const TimelineDefs = () => {
 };
 
 export const Next = () => {
+    const timelineItems: TimelineItemData[] = [
+        {
+            title: "Animation",
+            description: "Graceful transition between states",
+            status: window.innerWidth > 580 ? "Delivered - Beta Released Nov 2025" : "Delivered",
+            side: "right",
+        },
+        {
+            title: "Real-time Collaboration",
+            description: "Design with your team in real time",
+            status: "Coming Soon",
+            side: "left",
+        },
+        {
+            title: "Smart Object Layouts",
+            description: "No more alignment headaches",
+            status: "Coming Soon",
+            side: "right",
+        },
+        {
+            title: "Immersive Authoring",
+            description: "Design and collaborate immersively",
+            status: "Coming Soon",
+            side: "left",
+        },
+    ];
+    
     return (
         <SectionContainer>
             <Stack maxWidth="1280px" margin="0 auto" gap={12}>
