@@ -71,7 +71,7 @@ export default function PrimaryButton() {
                             background:
                                 "linear-gradient(to bottom, #424242, #343434)",
                             borderRadius: "18px",
-                            fontSize: "42px",
+                            fontSize: { base: "28px", sm: "42px" },
                             color: "white",
                             paddingY: "15px",
                             paddingX: "20px",
