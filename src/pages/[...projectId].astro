@@ -1,0 +1,14 @@
+---
+export const prerender = false;
+
+import { STRATA_APP_URL } from "~/constants";
+const { projectId } = Astro.params;
+
+if (!projectId) {
+    return Astro.redirect(STRATA_APP_URL);
+}
+if (projectId.length < 3) {
+    return Astro.redirect(`${STRATA_APP_URL}/examples/${projectId}/view`);
+}
+return Astro.redirect(`${STRATA_APP_URL}/projects/${projectId}/view`);
+---

@@ -71,7 +71,7 @@ export const Examples = () => {
         </Text>
     );
     const Iframe = (props: { id: string }) => {
-        const src = STRATA_APP_URL + "examples/" + props.id + "/embed";
+        const src = `${STRATA_APP_URL}/examples/${props.id}/embed`;
         return (
             <Show when={selectedExample() === props.id}>
                 <iframe
@@ -111,10 +111,7 @@ export const Examples = () => {
                     <Box width="fit-content" margin="0 auto">
                         <a
                             href={
-                                STRATA_APP_URL +
-                                "examples/" +
-                                selectedExample() +
-                                "/view"
+                                `${STRATA_APP_URL}/examples/${selectedExample()}/view`
                             }
                             target="_blank"
                         >
