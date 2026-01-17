@@ -8,7 +8,7 @@ export const Hero = () => {
     return (
         <Stack gap={10} paddingTop="120px" paddingBottom="160px" paddingX={8}>
             <Stack gap={5}>
-                <H1>Create and share spatial designs in minutes.</H1>
+                <H1>Create and Share XR Prototypes in Minutes</H1>
                 <Stack
                     justifyContent="center"
                     gap={2}

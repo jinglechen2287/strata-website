@@ -45,8 +45,34 @@ import Analytics from "@vercel/analytics/astro";
         <title>Strata - Spatial Design tool you will love</title>
     </head>
     <body>
-        <slot />
+        <div class="scale-wrapper">
+            <slot />
+        </div>
         <Analytics />
+        <script>
+            // Proportionally scale content for screens larger than 1720px
+            const SCALE_BREAKPOINT = 2560;
+
+            function updateScale() {
+                const wrapper = document.querySelector('.scale-wrapper') as HTMLElement;
+                if (!wrapper) return;
+
+                const viewportWidth = window.innerWidth;
+                
+                if (viewportWidth > SCALE_BREAKPOINT) {
+                    const scaleFactor = viewportWidth / SCALE_BREAKPOINT * 1.25;
+                    wrapper.style.zoom = String(scaleFactor);
+                } else {
+                    wrapper.style.zoom = '1';
+                }
+            }
+
+            // Initial scale
+            updateScale();
+
+            // Update on resize
+            window.addEventListener('resize', updateScale);
+        </script>
     </body>
 </html>
 
@@ -57,5 +83,10 @@ import Analytics from "@vercel/analytics/astro";
         width: 100%;
         height: 100%;
         background-color: #0d0d0d;
+    }
+
+    .scale-wrapper {
+        width: 100%;
+        min-height: 100%;
     }
 </style>

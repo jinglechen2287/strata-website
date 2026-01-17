@@ -147,7 +147,7 @@ export const Next = () => {
         {
             title: "Animation",
             description: "Graceful transition between states",
-            status: window.innerWidth > 580 ? "Delivered - Beta Released Nov 2025" : "Delivered",
+            status: window.innerWidth > 580 ? "Delivered - Jan 2026" : "Delivered",
             side: "right",
         },
         {

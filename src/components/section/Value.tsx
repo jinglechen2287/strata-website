@@ -11,7 +11,7 @@ import { Chromium, Smartphone, RectangleGoggles } from "lucide-solid";
 export const DesignEasily = () => {
     return (
         <SectionContainer>
-            <Stack maxWidth="1280px" margin="0 auto" gap={12}>
+            <Stack maxWidth="1720px" margin="0 auto" gap={12}>
                 <Stack gap={2}>
                     <H2>Spatial design made simple</H2>
                     <Text color="fg.muted" textAlign="center">
@@ -20,11 +20,9 @@ export const DesignEasily = () => {
                     </Text>
                 </Stack>
                 <Box
-                    marginX="0"
+                    marginX={{base: "0", sm: "4vw", md: "10%"}}
                     marginBottom="4"
                     padding="1px"
-                    sm={{ marginX: "4vw" }}
-                    md={{ marginX: "10vw" }}
                 >
                     <video
                         src={StrataVideo}
@@ -33,7 +31,6 @@ export const DesignEasily = () => {
                         muted
                         playsinline
                         class={css({
-                            maxWidth: "1280px",
                             width: "100%",
                             margin: "0 auto",
                             borderRadius: "lg",

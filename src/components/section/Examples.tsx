@@ -52,10 +52,6 @@ export const Examples = () => {
                     <Iframe id="4" />
                     <IframeHint />
                 </Tabs.Content>
-                <Tabs.Content value="5" width="100%" paddingTop="0 !important">
-                    <Iframe id="5" />
-                    <IframeHint />
-                </Tabs.Content>
             </Tabs.Root>
         );
     };
@@ -79,7 +75,6 @@ export const Examples = () => {
                     allowfullscreen
                     allow="vr; xr; gamepad; fullscreen; accelerometer; gyroscope; autoplay;"
                     class={css({
-                        maxWidth: "1280px",
                         width: "100%",
                         aspectRatio: "2/3",
                         display: "block",
@@ -98,14 +93,12 @@ export const Examples = () => {
 
     return (
         <SectionContainer>
-            <Stack maxWidth="1280px" margin="0 auto" gap={7}>
+            <Stack maxWidth="1720px" margin="0 auto" gap={7}>
                 <H2>Explore the latest examples</H2>
                 <Stack
-                    marginX="0"
+                    marginX={{base: "0", sm: "4vw", md: "10%"}}
                     marginBottom="4"
                     gap={6}
-                    sm={{ marginX: "4vw" }}
-                    md={{ marginX: "10vw" }}
                 >
                     <ExampleTabs size="md" />
                     <Box width="fit-content" margin="0 auto">
