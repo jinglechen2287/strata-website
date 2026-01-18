@@ -4,20 +4,6 @@ import { Link } from "~/components/ui/link";
 import { H2 } from "../ui/heading";
 import PrimaryButton from "~/components/ui/primaryButton";
 
-const FooterBg = () => {
-    return (
-        <Box
-            position="absolute"
-            bottom="0"
-            left="0"
-            width="100%"
-            height="320px"
-            zIndex={0}
-            background="linear-gradient(180deg, rgba(25, 25, 25, 0.00) 0%, #000 100%)"
-        />
-    );
-};
-
 export const Footer = () => {
     return (
         <footer>
@@ -83,6 +69,14 @@ export const Footer = () => {
                             marginX="auto"
                         >
                             Terms of Service
+                        </Link>
+                        <Link
+                            href="/attributions"
+                            color="fg.muted"
+                            fontWeight="normal"
+                            marginX="auto"
+                        >
+                            Attributions
                         </Link>
                     </Stack>
                 </Stack>

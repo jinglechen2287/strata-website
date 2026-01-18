@@ -1,0 +1,140 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import { Header } from "~/components/section/Header";
+import { Heading } from "~/components/ui/heading";
+import { Text } from "~/components/ui/text";
+---
+
+<Layout>
+    <Header />
+    <div style="max-width: 760px; margin: 0 auto; padding: 40px 20px;">
+        <Heading as="h1" size="2xl" textAlign="left" marginBottom="24px"
+            >Attributions</Heading
+        >
+
+        <Text marginTop="8px">
+            Strata uses the following open-source libraries, assets, and
+            resources. We are grateful to the creators and maintainers of these
+            projects.
+        </Text>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">Open Source Libraries</Heading
+        >
+        <ul
+            style="padding-left: 1.25rem; margin: 8px 0 16px; display: grid; gap: 6px;"
+        >
+            <Text as="li">
+                <a
+                    href="https://aframe.io/"
+                    target="_blank"
+                    style="text-decoration: underline;">A-Frame</a
+                >
+            </Text>
+            <Text as="li">
+                <a
+                    href="https://threejs.org/"
+                    target="_blank"
+                    style="text-decoration: underline;">Three.js</a
+                >
+            </Text>
+            <Text as="li">
+                <a
+                    href="https://solidjs.com/"
+                    target="_blank"
+                    style="text-decoration: underline;">SolidJs</a
+                >
+            </Text>
+            <Text as="li">
+                <a
+                    href="https://astro.build/"
+                    target="_blank"
+                    style="text-decoration: underline;">Astro</a
+                >
+            </Text>
+            <Text as="li">
+                <a
+                    href="https://park-ui.com/"
+                    target="_blank"
+                    style="text-decoration: underline;">Park UI</a
+                >
+            </Text>
+            <Text as="li">
+                <a
+                    href="https://ark-ui.com/"
+                    target="_blank"
+                    style="text-decoration: underline;">Ark UI</a
+                >
+            </Text>
+            <Text as="li">
+                <a
+                    href="https://panda-css.com/"
+                    target="_blank"
+                    style="text-decoration: underline;">PandaCSS</a
+                >
+            </Text>
+            <Text as="li">
+                <a
+                    href="https://tanstack.com/"
+                    target="_blank"
+                    style="text-decoration: underline;">Tanstack Query</a
+                >
+            </Text>
+        </ul>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">Icons & Graphics</Heading
+        >
+        <ul
+            style="padding-left: 1.25rem; margin: 8px 0 16px; display: grid; gap: 6px;"
+        >
+            <Text as="li">
+                <a
+                    href="https://lucide.dev/"
+                    target="_blank"
+                    style="text-decoration: underline;">Lucide Icons</a
+                >
+            </Text>
+            <Text as="li">
+                <a
+                    href="https://poly.pizza/"
+                    target="_blank"
+                    style="text-decoration: underline;">Poly.Pizza</a
+                >
+            </Text>
+            <Text as="li">
+                <a
+                    href="https://www.thiings.co/"
+                    target="_blank"
+                    style="text-decoration: underline;">Thiings</a
+                >
+            </Text>
+        </ul>
+
+        <hr style="border-color: #1f1f1f; margin: 24px 0;" />
+
+        <Heading
+            as="h2"
+            size="xl"
+            textAlign="left"
+            marginTop="32px"
+            marginBottom="8px">Special Thanks</Heading
+        >
+        <Text>
+            We would like to also express our gratitude to all the open-source
+            dependencies that power the above projects.
+        </Text>
+    </div>
+</Layout>
