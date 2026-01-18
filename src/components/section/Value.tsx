@@ -26,19 +26,25 @@ export const DesignEasily = () => {
                     marginBottom="4"
                     padding="1px"
                 >
-                    <video
-                        src={StrataVideo}
-                        autoplay
-                        loop
-                        muted
-                        playsinline
-                        class={css({
-                            width: "100%",
-                            margin: "0 auto",
-                            borderRadius: "lg",
-                            boxShadow: "0px 0px 12px rgb(36, 36, 36)",
-                        })}
-                    />
+                    <a
+                        href={StrataVideo}
+                        target="_blank"
+                        aria-label="Strata demo video"
+                    >
+                        <video
+                            src={StrataVideo}
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            class={css({
+                                width: "100%",
+                                margin: "0 auto",
+                                borderRadius: "lg",
+                                boxShadow: "0px 0px 12px rgb(36, 36, 36)",
+                            })}
+                        />
+                    </a>
                 </Box>
             </Stack>
         </SectionContainer>
